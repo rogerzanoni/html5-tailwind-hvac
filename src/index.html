@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="flex flex-row space-x-4 mx-20 mt-10 place-items-center justify-around">
+    <img src="images/HMI_HVAC_Fan_Icon.svg" class="basis-1/6 h-24"/>
+    <input id="fan" type="range" min="0" max="100" value="40" class="range range-primary basis-5/6" />
+  </div>
+  <div class="flex flex-row space-x-4 mx-20 mt-10 place-items-center justify-around">
+    <div clas="flex flex-col">
+      <a onclick="CHAIRS.left(this);">
+        <img id="leftChair" src="images/HMI_HVAC_Left_Chair_OFF.svg" class="basis-1/5 h-24"/>
+        <img id="leftChairIndicator" src="images/HMI_HVAC_ChairIndicator_OFF.svg" class="basis-1/5 w-24"/>
+      </a>
+    </div>
+    <a key="ac" onclick="BUTTONS.toggle(this);">
+      <div class="relative">
+        <img id="ac" src="images/HMI_HVAC_Inactive.svg" class="basis-1/5 h-24"/>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">A/C</div>
+      </div>
+    </a>
+    <div clas="flex flex-col">
+      <a onclick="CHAIRS.right(this);">
+        <img id="rightChair" src="images/HMI_HVAC_Right_Chair_OFF.svg" class="basis-1/5 h-24"/>
+        <img id="rightChairIndicator" src="images/HMI_HVAC_ChairIndicator_OFF.svg" class="basis-1/5 w-24"/>
+      </a>
+    </div>
+    </div>
+  </div>
+  <div class="flex flex-row space-x-4 mx-20 mt-10 place-items-center justify-around">
+    <a key="auto" onclick="BUTTONS.toggle(this);">
+      <div class="relative">
+        <img id="auto" src="images/HMI_HVAC_Inactive.svg" class="basis-1/5 h-24"/>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">AUTO</div>
+      </div>
+    </a>
+  </div>
+  <div class="flex flex-row space-x-4 mx-20 mt-10 place-items-center justify-around">
+    <a key="recirculation" onclick="BUTTONS.toggle(this);">
+      <img id="recirculation" src="images/HMI_HVAC_Circulation_Inactive.svg" class="basis-1/5 h-24"/>
+    </a>
+  </div>
+  <textarea id="receivedMessages" class="textarea textarea-primary w-full h-96" placeholder="Messages" disabled></textarea>
+</body>
+</html>
